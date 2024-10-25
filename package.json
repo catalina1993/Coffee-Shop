@@ -1,0 +1,21 @@
+{
+  "name": "coffeeshop",
+  "version": "1.0.0",
+  "description": "Coffee Shop Landing Page",
+  "source": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel --open",
+    "build": "parcel build"
+  },
+  "keywords": [],
+  "author": "Elena Ispas, Christopher McNeal-Kennedy, Ross Miller",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.12.0",
+    "parcel": "^2.12.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.3"
+  }
+}

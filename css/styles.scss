@@ -1,0 +1,113 @@
+$color-primary: #d89749;
+$color-secondary: #edbb7a;
+$color-pale: #FFF4E6;
+$color-mid: #dd9d36;
+$color-dark: #e1a01e;
+$color-black-transparent: rgba(241, 207, 84, 0.5);
+$color-teal: #17A2B8;
+
+
+$body-font: "Open Sans", sans-serif;
+$header-font: "Lobster", cursive;
+
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+body {
+    font-family: $body-font;
+}
+
+h1 {
+    $color-mid: 603809;
+}
+
+h2,
+h3 {
+    font-family: $header-font;
+}
+
+h2 {
+    color: $color-primary;
+}
+
+header {
+    background-color: brown;
+    font-family: papyrus;
+    font-style: italic;
+    font-weight: bolder;
+    color: aliceblue;
+    /* background-image: url(/img/coffe-backdrop.jpg);*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-shadow: 3px 3px black;
+}
+
+footer {
+    background-image: linear-gradient($color-pale, rgb(65, 54, 54));
+    padding: 20px 0;
+}
+
+header {
+    padding: 30px;
+    background-image: linear-gradient(to right, $color-secondary, $color-primary, $color-dark);
+    color: white;
+}
+
+.row-content {
+    padding: 50px 0;
+    border-bottom: 1px ridge;
+    min-height: 200px;
+}
+
+.accordion-button {
+    background-color: #d3d3d3;
+}
+
+.navbar {
+    background-color: #fdf4e3; 
+    padding-top: 20px;
+    padding-left: 120px;
+    padding-bottom: 20px;
+    padding-right: 120px;
+}
+
+.carousel {
+    border: solid $color-secondary;
+}
+
+.carousel-caption {
+    background-color: $color-black-transparent;
+}
+
+@import 'modal';
+
+.site-footer {
+    background-image: linear-gradient(#f1d171, white);
+    padding: 10px 0;
+}
+
+.bg-button{
+    background-color: orangered;
+}
+
+.background-pale {
+    background-color: #FFF4E6;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Add shadow on hover */
+}
+

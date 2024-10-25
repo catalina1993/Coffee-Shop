@@ -1,0 +1,260 @@
+<!-- Members: Ross Miller, Elena Ispas, Christopher McNeal-Kennedy-->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  
+  <!--CSS File-->
+
+
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+
+  <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/fontawesome.css" />
+  <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/brands.css" />
+  <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/solid.css" />
+
+  <link rel="stylesheet" href="css/styles.scss" />
+
+  <title>Coffee House</title>
+
+
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fdf4e3; padding: 2rem;">
+    <div class="container-fluid">
+      <a class="navbar-brand me-auto" href="#">
+        <img src="/img/logo.png" alt="Brand Logo" width="191" class="d-inline-block align-text-top">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact US</a>
+          </li>
+          <button type="button" class="btn btn-warning active align-texts-center" role="button" data-bs-toggle="modal"
+            data-bs-target="#reserveModal">Reservations</button>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="modal fade" id="reserveModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header button btn-warning">
+          <h3 class="modal-title">Reserve a Table</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="container-fluid">
+            <form id="reserveForm" action="https://us-central1-nucamp-production.cloudfunctions.net/post/formdata"
+              method="post">
+              <div class="form-group row">
+                <label for="numberofdiners" class="col col-form-label">Number of Diners</label>
+                <div class="col-sm mb-3">
+                  <select name="numberofdiners" id="numberofdiners" class="form-control">
+                    <option selected>Select...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="reservedate" class="col-sm col-form-label">Date</label>
+                <div class="col-sm mb-3">
+                  <input type="date" id="reservedate" name="reservedate" class="form-control" placeholder="mm/dd/yyyy">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm">
+                  <button type="" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                  <button type="submit" class="btn btn-warning">Reserve </button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Hero Section-->
+
+  <div class="container col-xxl-8 px-4 py-5 ">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="/img/coffee_image.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700"
+          height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <p class="lead">We’ve got your morning covered with</p>
+        <img src="img/Coffee_Text.png" height="120">
+        <p class="lead">It is best to start your day with a cup of coffee. Discover the
+          best flavors coffee you will ever have. We provide the best
+          for our customers.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <button type="button" class="btn btn-warning active align-texts-center" role="button">Order Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div style="background-color: #fdf4e3;">
+  <div class="container col-xxl-8 px-4 py-5" >
+    <div class="row flex-lg-row align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="/img/coffee-beans.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700"
+          height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">Discover the best coffee</h1>
+        <p class="lead"> The Bean Scene is a coffee shop that provides you with quality coffee that helps boost your
+          productivity and helps build your mood.
+          Having a cup of coffee is good, but having a cup of real coffee is greater.
+          There is no doubt that you will enjoy this coffee more than others you have ever tasted.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <button type="button" class="btn btn-warning active align-texts-center" role="button">Learn More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-flex flex-column justify-content-center align-items-center text-center" style="min-height: 20vh;">
+    <h1 class="display-5 fw-bold lh-1 mb-3">Enjoy a new blend of coffee style</h1>
+    <p>Explore all flavours of coffee with us. There is always a new cup worth experiencing.</p>
+  </div>
+</div>
+
+  <!--Cards-->
+
+  <div class="divider"></div>
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-lg-6 d-flex justify-content-center">
+        <div class="card w-100 border-0">
+          <img src="/img/cappuccino.png" class="card-img-top" alt="Placeholder">
+          <div class="card-body">
+            <h5 class="card-title">Cappuccino</h5>
+            <p class="card-text">$8.50</p>
+            <button type="button" class="btn btn-warning active align-texts-center" role="button">Order Now</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 d-flex justify-content-center">
+        <div class="card w-100 border-0">
+          <img src="/img/chai-latte.png" class="card-img-top" alt="Placeholder">
+          <div class="card-body">
+            <h5 class="card-title">Chai Latte</h5>
+            <p class="card-text">$8.50</p>
+            <button type="button" class="btn btn-warning active align-texts-center" role="button">Order Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-lg-6 d-flex justify-content-center">
+        <div class="card w-100 border-0">
+          <img src="/img/macchiato.png" class="card-img-top" alt="Placeholder">
+          <div class="card-body">
+            <h5 class="card-title">Macchiato</h5>
+            <p class="card-text">$8.50</p>
+            <button type="button" class="btn btn-warning active align-texts-center" role="button">Order Now</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 d-flex justify-content-center">
+        <div class="card w-100 border-0">
+          <img src="/img/espresso.png" class="card-img-top" alt="Placeholder">
+          <div class="card-body">
+            <h5 class="card-title">Espresso</h5>
+            <p class="card-text">$8.50</p>
+            <button type="button" class="btn btn-warning active align-texts-center" role="button">Order Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-----Footer------>
+
+    <footer style="background-color: #fdf4e3; padding: 2rem;">
+  <div class="container">
+    <div class="row">
+      <!-- Logo Section -->
+      <div class="col-md-3 text-center">
+        <img src="/img/logo.png" alt="Brand Logo" width="191" class="d-inline-block align-text-top">
+      </div>
+
+      <!-- Links Section -->
+      <div class="col-md-3">
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-dark" style="font-weight: bold;">Features</a></li>
+          <li><a href="#" class="text-dark">About Us</a></li>
+          <li><a href="#" class="text-dark">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-dark" style="font-weight: bold;">Privacy Policy</a></li>
+          <li><a href="#" class="text-dark">Terms of Use</a></li>
+          <li><a href="#" class="text-dark">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media Section -->
+      <div class="col-md-3 text-center">
+        <h5 class="fw-bold">Follow us</h5>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.29395 6.928L14.357 1H13.157L8.76195 6.147L5.24995 1H1.19995L6.50995 8.784L1.19995 15H2.39995L7.04195 9.564L10.751 15H14.801L9.29395 6.928ZM7.65095 8.852L7.11295 8.077L2.83195 1.91H4.67495L8.12895 6.887L8.66695 7.662L13.158 14.132H11.315L7.65095 8.852Z" fill="black"/>
+        </svg>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.19992 1.33325H10.7999C12.9333 1.33325 14.6666 3.06659 14.6666 5.19992V10.7999C14.6666 11.8254 14.2592 12.8089 13.5341 13.5341C12.8089 14.2592 11.8254 14.6666 10.7999 14.6666H5.19992C3.06659 14.6666 1.33325 12.9333 1.33325 10.7999V5.19992C1.33325 4.17441 1.74063 3.19091 2.46577 2.46577C3.19091 1.74063 4.17441 1.33325 5.19992 1.33325ZM5.06659 2.66659C4.43007 2.66659 3.81962 2.91944 3.36953 3.36953C2.91944 3.81962 2.66659 4.43007 2.66659 5.06659V10.9333C2.66659 12.2599 3.73992 13.3333 5.06659 13.3333H10.9333C11.5698 13.3333 12.1802 13.0804 12.6303 12.6303C13.0804 12.1802 13.3333 11.5698 13.3333 10.9333V5.06659C13.3333 3.73992 12.2599 2.66659 10.9333 2.66659H5.06659ZM11.4999 3.66659C11.7209 3.66659 11.9329 3.75438 12.0892 3.91066C12.2455 4.06694 12.3333 4.2789 12.3333 4.49992C12.3333 4.72093 12.2455 4.93289 12.0892 5.08917C11.9329 5.24545 11.7209 5.33325 11.4999 5.33325C11.2789 5.33325 11.0669 5.24545 10.9107 5.08917C10.7544 4.93289 10.6666 4.72093 10.6666 4.49992C10.6666 4.2789 10.7544 4.06694 10.9107 3.91066C11.0669 3.75438 11.2789 3.66659 11.4999 3.66659ZM7.99992 4.66658C8.88397 4.66659 9.73182 5.01777 10.3569 5.6429C10.9821 6.26802 11.3333 7.11586 11.3333 7.99992C11.3333 8.88397 10.9821 9.73182 10.3569 10.3569C9.73182 10.9821 8.88397 11.3333 7.99992 11.3333C7.11586 11.3333 6.26802 10.9821 5.6429 10.3569C5.01777 9.73182 4.66658 8.88397 4.66658 7.99992C4.66658 7.11586 5.01777 6.26802 5.6429 5.6429C6.26802 5.01777 7.11586 4.66659 7.99992 4.66658ZM7.99992 5.99992C7.46949 5.99992 6.96078 6.21063 6.5857 6.5857C6.21063 6.96078 5.99992 7.46949 5.99992 7.99992C5.99992 8.53035 6.21063 9.03906 6.5857 9.41413C6.96078 9.7892 7.46949 9.99992 7.99992 9.99992C8.53035 9.99992 9.03906 9.7892 9.41413 9.41413C9.7892 9.03906 9.99992 8.53035 9.99992 7.99992C9.99992 7.46949 9.7892 6.96078 9.41413 6.5857C9.03906 6.21063 8.53035 5.99992 7.99992 5.99992Z" fill="black"/>
+            </svg>
+      </div>
+    </div>
+  </div>
+</footer>
+ <!-----End of Footer---->
+ 
+  <!-- Bootstrap JavaScript plugins -->
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
